@@ -1,40 +1,120 @@
 #!/bin/bash
 
-echo "Saving..."
-sleep 2
+sleep 0.4
+clear
+echo "Saving...
+                                                      _______"
+sleep 0.2
+clear
+
+echo "Saving...
+                                                      -______"
+sleep 0.2
+clear
+
+echo "Saving...
+                                                      _-_____"
+sleep 0.2
+clear
+
+echo "Saving...
+                                                      __-____"
+sleep 0.2
+clear
 
 git add .
 git commit -m "Quick-Update (from Replit)"
 git push origin main
 git pull origin main
-
-sleep 1
 clear
 
-echo "              -"
-sleep 0.5
+echo "Saving...
+                                                      _______"
+sleep 0.2
 clear
 
-echo "              --"
-sleep 0.5
+echo "Saving...
+                                                      -______"
+sleep 0.2
 clear
 
-echo "              ---"
-sleep 0.5
+echo "Saving...
+                                                      _-_____"
+sleep 0.2
 clear
 
-echo "              -"
-sleep 0.5
+echo "Saving...
+                                                      __-____"
+sleep 0.2
 clear
 
-echo "              --"
-sleep 0.5
+echo "Saving...
+                                                      ___-___"
+sleep 0.2
 clear
 
-echo "              ---"
-sleep 1
+echo "Saving...
+                                                      ____-__"
+sleep 0.2
+clear
 
-echo "Done!"
+echo "Saving...
+                                                      _____-_"
+sleep 0.2
+clear
+
+echo "Saving...
+                                                      ______-"
+sleep 0.2
+clear
+
+echo "Saving...
+                                                      _______"
+sleep 0.2
+clear
+
+echo "Saving...
+                                                      -______"
+sleep 0.2
+clear
+
+echo "Saving...
+                                                      _-_____"
+sleep 0.2
+clear
+
+echo "Saving...
+                                                      __-____"
+sleep 0.2
+clear
+
+echo "Saving...
+                                                      ___-___"
+sleep 0.2
+clear
+
+echo "Saving...
+                                                      ____-__"
+sleep 0.2
+clear
+
+echo "Saving...
+                                                      _____-_"
+sleep 0.2
+clear
+
+echo "Saving...
+                                                      ______-"
+sleep 0.2
+clear
+
+echo "Saving...
+                                                      _______"
+sleep 0.8
+clear
+
+echo "Saved to Github
+                                                      _______"
 sleep 2
 clear
 

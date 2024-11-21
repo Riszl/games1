@@ -3,27 +3,83 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <!--<meta http-equiv="refresh" content="0; url=/index(maintenance).html" /> <!---->
+    <!--<meta http-equiv="refresh" content="0; url=/index(maintenance).html" />-->
     <meta http-equiv="refresh" content="200; url=https://drive.google.com/drive/home" />
-    <title>Dashboard</title>
+    <title>Horse | Definition, Breeds, Pictures, Evolution, & Facts | Britannica</title>
+    <link rel="icon" type="image/x-icon" href="https://www.britannica.com/favicon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="special.css">
-    <link rel="icon" type="image/x-icon" href="https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico">
     <link rel="manifest" href="manifest.json">
     <script>
-        function detectBrowser() {
+
+        var renvtionStatus = 0;
+
+        /*2 is BIG renovations, 1 is moderate, and 0 is none (to alert of).*/   
+
+        if ( renvtionStatus === 2 ) {
+          alert('WARNING: The website is going oer massive renovations, making most of the features unusable.');
+        } else if ( renvtionStatus === 1 ) {
+          alert('Notice: The website is going over moderate renovations, and some features may not work properly.');
+        } else if ( renvtionStatus === 0 ) {
+        }
+
+        /* function detectBrowser() {
             var userAgent = navigator.userAgent;
             var isChrome = /Chrome/.test(userAgent) && /Google Inc/.test(navigator.vendor);
 
             if (!isChrome) {
                 alert("For the best experience, please use Google Chrome.");
             }
+        } */
+
+        const lookStyles = {
+          "lookClever": {
+            title: "Clever | Portal",
+            favicon: "https://assets.clever.com/oauth/62839f373c357da633e3bc67fdb79e440d9d4261/favicon.ico?1"
+          },
+
+          "lookCanvas": {
+            title: "Dashboard",
+            favicon: "https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico"
+          },
+
+          "lookDefault": {
+            title: "Horse | Definition, Breeds, Pictures, Evolution, & Facts | Britannica",
+            favicon: "https://www.britannica.com/favicon.png"
+          },
+
+          "lookClassroom": {
+            title: "Home",
+            favicon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Google_Classroom_Logo.svg/2372px-Google_Classroom_Logo.svg.png"
+          },
+
+          "lookDocs": {
+            title: "Horse Essay - Google Docs",
+            favicon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeUE7BRm2ME_-ppQcgRXQ2EqFh7S9sozIw5g&s"
+          }
+
+        };
+
+        function updateLook(style) {
+          document.title = lookStyles[style].title;
+
+          const link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+          link.type = 'image/x-icon';
+          link.rel = 'icon';
+          link.href = lookStyles[style].favicon;
+          document.getElementsByTagName('head')[0].appendChild(link);
         }
 
+        document.getElementById('lookClever').addEventListener('click', () => updateLook('lookClever'));
+        document.getElementById('lookCanvas').addEventListener('click', () => updateLook('lookCanvas'));
+        document.getElementById('lookDefault').addEventListener('click', () => updateLook('lookDefault'));
+        document.getElementById('lookClassroom').addEventListener('click', () => updateLook('lookClassroom'));
+        document.getElementById('lookDocs').addEventListener('click', () => updateLook('lookDocs'));
+      
         function quick_switch() {
             window.location.href = "https://drive.google.com/drive/home";
         }
-
+      
         function updateTime() {
             const now = new Date();
             const hours = String(now.getHours()).padStart(2, '0');
@@ -34,42 +90,73 @@
         document.addEventListener('keydown', function(event) {
            if (event.key === 'q' || event.key === 'Q') {
               quick_switch();
+           } else if(event.key === 'h' || event.key === 'H') {
+              alert('Ah jez Rick, I-I dont know what that means...')
            }
         });
 
-        // Update time every minute (60000 milliseconds)
         setInterval(updateTime, 60000);
 
-        // Initialize time display when the window loads
         window.onload = function() {
             updateTime();
             detectBrowser();
         };
+
+        // Hey buddy, there's alot of easter eggs in here, so don't spoil anything for anybody!
     </script>
     <script src="script.js"></script>
   </head>
   <body>
     <div class="header">
-      <h1>Unblocked Games</h1>
-      <!--<div class="category">
-        <h1>Running</h1>
-        <h1>Stickman</h1>
-        <h1>Fighting</h1>-->
+      <div class="main-title">
+        <h1>Unblocked Games</h1>
+      </div>
+      <div class="category">
+        <a href="category/runner/index.html"><h2>Running</h2></a>
+        <a href="category/stickman/index.html"><h2>Stickman</h2></a>
+        <!--<div class="dropdown">
+          <button class="dropbtn">More</button>
+          <div class="dropdown-content">
+            <a href="category/car/index.html">Car</a>
+            <a href="category/dev-picks/index.html">Dev Picks</a>
+            <a href="category/fighting/index.html">Fighting</a>
+            <a href="category/popular/index.html">Popular</a>
+            <a href="category/shooting/index.html">Shooting</a>
+          </div>
+        </div>-->
+      </div>
+      <div class="search-btn">
+        <a href="search/new.html"><h2>🔎</h2></a>
+      </div>
+      <div class="cloak-btn">
+        <a href="https://my-developer-portfolio.pages.dev/"><h2>🌐</h2></a>
       </div>
     </div>
     <p>All games</p>
     <hr>
     <div class="imgs">
-       <a href="go/among-us.html"><img src="https://artedu1808.github.io/img/among-us.png"></a>
+       <a href="go/sm64.html"><img src="https://artedu1808.github.io/img/super-mario-64.png"></a>
+       <a href="go/half-life.html"><img src="imgs/half-life.png"></a>
+       <a href="go/deepest-sword.html"><img src="https://artedu1808.github.io/img/deepest-sword.png"></a>
+       <a href="go/mk48-io.html"><img src="imgs/mk48-io.png"></a>
+       <a href="go/eaglercraft.html"><img src="https://artedu1808.github.io/img/minecraft.png"></a>
+       <a href="go/masked-forces.html"><img src="https://artedu1808.github.io/img/masked-forces.png"></a>
+       <a href="go/monkey-mart.html"><img src="https://artedu1808.github.io/img/monkey-mart.png"></a>
        <a href="go/paper-io-2.html"><img src="https://artedu1808.github.io/img/paper-io-2.png"></a>
        <a href="go/subway-surfers-newyork.html"><img src="https://artedu1808.github.io/img/subway-surfers-newyork.png"></a>
-       <a href="go/moto-x3m.html"><img src="https://artedu1808.github.io/img/moto-x3m.png"></a>
+       <a href="go/happy-wheels.html"><img src="imgs/happy-wheels.png"></a>
        <a href="go/cookie-clicker.html"><img src="https://artedu1808.github.io/img/cookie-clicker.png"></a>
+       <a href="go/hazmob-fps.html"><img src="imgs/hazmob-fps.png"></a>
        <a href="go/tunnel-rush.html"><img src="https://artedu1808.github.io/img/tunnel-rush.png"></a>
        <a href="go/drive-mad.html"><img src="https://artedu1808.github.io/img/drive-mad.png"></a>
-       <a href="go/sm64.html"><img src="https://artedu1808.github.io/img/super-mario-64.png"></a>
-       <a href="go/bitlife.html"><img src="https://artedu1808.github.io/img/bitlife.png"></a>
-       <a href="go/slope.html"><img src="https://artedu1808.github.io/img/slope.png"></a>
+       <a href="go/1v1-lol/"><img src="https://artedu1808.github.io/img/1v1-lol.png"></a>
+       <a href="go/shell-shockers.html"><img src="imgs/shell-shockers.png"></a>
+       <a href="go/snow-road.html"><img src="imgs/snow-road.png"></a>
+       <a href="go/gunspin.html"><img src="https://artedu1808.github.io/img/gunspin.png"></a>
+       <a href="go/hole-io.html"><img src="imgs/hole-io.png"></a>
+       <a href="go/agar-io"><img src="imgs/agar-io.png"></a>
+       <a href="go/diep-io.html"><img src="imgs/diep-io.png"></a>
+       <a href="go/slither-io.html"><img src="imgs/slither-io.png"></a>
        <a href="go/top-speed-racing-3d.html"><img src="https://artedu1808.github.io/img/top-speed-racing-3d.png"></a>
        <a href="go/the-impossible-quiz.html"><img src="https://artedu1808.github.io/img/the-impossible-quiz.png"></a>
        <a href="go/raft-wars.html"><img src="https://artedu1808.github.io/img/raft-wars.png"></a>
@@ -78,7 +165,7 @@
        <a href="go/subway-surfers-san-fransisco.html"><img src="https://artedu1808.github.io/img/subway-surfers.png"></a>
        <a href="go/jetpack-joyride.html"><img src="https://artedu1808.github.io/img/jetpack-joyride.png"></a>
        <a href="go/fancy-pants-3.html"><img src="https://artedu1808.github.io/img/fancy-pants-3.png"></a>
-       <a href="go/pixel-gun-survival.html"><img src="https://artedu1808.github.io/img/pixel-gun-survival.png"></a>
+       <a href="go/moto-x3m.html"><img src="https://artedu1808.github.io/img/moto-x3m.png"></a>
        <a href="go/stickman-hook.html"><img src="https://artedu1808.github.io/img/stickman-hook.png"></a>
        <a href="go/super-hot.html"><img src="https://artedu1808.github.io/img/super-hot.png"></a>
        <a href="go/stick-merge.html"><img src="https://artedu1808.github.io/img/stick-merge.png"></a>
@@ -93,17 +180,15 @@
        <a href="go/super-tunnel-rush.html"><img src="https://artedu1808.github.io/img/super-tunnel-rush.png"></a>
        <a href="go/soccer-random.html"><img src="https://artedu1808.github.io/img/soccer-random.png"></a>
        <a href="go/moto-x3m-2.html"><img src="https://artedu1808.github.io/img/moto-x3m-2.png"></a>
-       <a href="go/monkey-mart.html"><img src="https://artedu1808.github.io/img/monkey-mart.png"></a>
+       <a href="go/among-us.html"><img src="https://artedu1808.github.io/img/among-us.png"></a>
        <a href="go/cluster-rush.html"><img src="https://artedu1808.github.io/img/cluster-rush.png"></a>
        <a href="go/idle-digging-tycoon.html"><img src="https://artedu1808.github.io/img/idle-digging-tycoon.png"></a>
-       <a href="go/eaglercraft.html"><img src="https://artedu1808.github.io/img/minecraft.png"></a>
        <a href="go/rooftop-snipers-2.html"><img src="https://artedu1808.github.io/img/rooftop-snipers-2.png"></a>
        <a href="go/shoot-stickman.html"><img src="https://artedu1808.github.io/img/shoot-stickman.png"></a>
        <a href="go/sniper-gun-shooting.html"><img src="https://artedu1808.github.io/img/sniper-gun-shooting.png"></a>
        <a href="go/gobble.html"><img src="https://artedu1808.github.io/img/gobble.png"></a>
        <a href="go/fancy-pants-2.html"><img src="https://artedu1808.github.io/img/fancy-pants-2.png"></a>
        <a href="go/vex-7.html"><img src="https://artedu1808.github.io/img/vex-7.png"></a>
-       <a href="go/masked-forces.html"><img src="https://artedu1808.github.io/img/masked-forces.png"></a>
        <a href="go/perfect-peel.html"><img src="https://artedu1808.github.io/img/perfect-peel.png"></a>
        <a href="go/penalty-shooters-2.html"><img src="https://artedu1808.github.io/img/penalty-shooters-2.png"></a>
        <a href="go/idle-lumber-inc.html"><img src="https://artedu1808.github.io/img/idle-lumber-inc.png"></a>
@@ -126,7 +211,7 @@
        <a href="go/sausage-flip.html"><img src="https://artedu1808.github.io/img/sausage-flip.png"></a>
        <a href="go/stacktris.html"><img src="https://artedu1808.github.io/img/stacktris.png"></a>
        <a href="go/tiny-fishing.html"><img src="https://artedu1808.github.io/img/tiny-fishing.png"></a>
-       <a href="go/8-ball-pool.html"><img src="https://artedu1808.github.io/img/8-ball-pool.png"></a>
+       <a href="go/8-ball-pool"><img src="https://artedu1808.github.io/img/8-ball-pool.png"></a>
        <a href="go/eugenes-life.html"><img src="https://artedu1808.github.io/img/eugenes-life.png"></a>
        <a href="go/dreadhead-parkour.html"><img src="https://artedu1808.github.io/img/dreadhead-parkour.png"></a>
        <a href="go/stack.html"><img src="https://artedu1808.github.io/img/stack.png"></a>
@@ -145,7 +230,7 @@
        <a href="go/rowdy-city-wrestling.html"><img src="https://artedu1808.github.io/img/rowdy-city-wrestling.png"></a>
        <a href="go/temple-of-boom.html"><img src="https://artedu1808.github.io/img/temple-of-boom.png"></a>
        <a href="go/stack-ball.html"><img src="https://artedu1808.github.io/img/stack-ball.png"></a>
-       <a href="go/1v1-lol.html"><img src="https://artedu1808.github.io/img/1v1-lol.png"></a>
+       <a href="go/among-us.html"><img src="https://artedu1808.github.io/img/among-us.png"></a>
        <a href="go/tag-2.html"><img src="https://artedu1808.github.io/img/tag-2.png"></a>
        <a href="go/football-masters.html"><img src="https://artedu1808.github.io/img/football-masters.png"></a>
        <a href="go/n-gon.html"><img src="https://artedu1808.github.io/img/n-gon.png"></a>
@@ -184,7 +269,7 @@
        <a href="go/flying-car-simulator.html"><img src="https://artedu1808.github.io/img/flying-car-simulator.png"></a>
        <a href="go/bubble-trouble.html"><img src="https://artedu1808.github.io/img/bubble-trouble.png"></a>
        <a href="go/rally-champion.html"><img src="https://artedu1808.github.io/img/rally-champion.png"></a>
-       <a href="go/big-shot-boxing.html"><img src="https://artedu1808.github.io/img/big-shot-boxing.png"></a>
+       <a href="go/big-shot-boxing/index.html"><img src="https://artedu1808.github.io/img/big-shot-boxing.png"></a>
        <a href="go/gold-digger-frvr.html"><img src="https://artedu1808.github.io/img/gold-digger-frvr.png"></a>
        <a href="go/where-is-my-cat.html"><img src="https://artedu1808.github.io/img/where-is-my-cat.png"></a>
        <a href="go/paper-fighter-3d.html"><img src="https://artedu1808.github.io/img/paper-fighter-3d.png"></a>
@@ -196,7 +281,7 @@
        <a href="go/boxing-physics-2.html"><img src="https://artedu1808.github.io/img/boxing-physics-2.png"></a>
        <a href="go/moto-trial-racing-2.html"><img src="https://artedu1808.github.io/img/moto-trial-racing-2.png"></a>
        <a href="go/basketball-line.html"><img src="https://artedu1808.github.io/img/basketball-line.png"></a>
-       <a href="go/10-minutes-till-dawn.html"><img src="https://artedu1808.github.io/img/10-minutes-till-dawn.png"></a>
+       <a href="go/10-minutes-till-dawn"><img src="https://artedu1808.github.io/img/10-minutes-till-dawn.png"></a>
        <a href="go/slope-2.html"><img src="https://artedu1808.github.io/img/slope-2.png"></a>
        <a href="go/detective-loupe-puzzle.html"><img src="https://artedu1808.github.io/img/detective-loupe-puzzle.png"></a>
        <a href="go/pop-it-master.html"><img src="https://artedu1808.github.io/img/pop-it-master.png"></a>
@@ -237,6 +322,7 @@
        <a href="go/snow-rider-3d.html"><img src="https://artedu1808.github.io/img/snow-rider-3d.png"></a>
        <a href="go/stickman-golf.html"><img src="https://artedu1808.github.io/img/stickman-golf.png"></a>
        <a href="go/head-soccer-2023.html"><img src="https://artedu1808.github.io/img/head-soccer-2023.png"></a>
+       <!-- Hi! This is the developer, Kaden. If ur seeing this, then youve found 1 out of ... however many easter eggs I put in here! -->
        <a href="go/basket-champs.html"><img src="https://artedu1808.github.io/img/basket-champs.png"></a>
        <a href="go/heart-star-html5.html"><img src="https://artedu1808.github.io/img/heart-star-html5.png"></a>
        <a href="go/power-badminton.html"><img src="https://artedu1808.github.io/img/power-badminton.png"></a>
@@ -252,13 +338,12 @@
        <a href="go/free-the-key.html"><img src="https://artedu1808.github.io/img/free-the-key.png"></a>
        <a href="go/drift-boss.html"><img src="https://artedu1808.github.io/img/drift-boss.png"></a>
        <a href="go/tricks.html"><img src="https://artedu1808.github.io/img/tricks.png"></a>
-       <a href="go/3d-car-simulator.html"><img src="https://artedu1808.github.io/img/3d-car-simulator.png"></a>
+       <a href="go/3d-car-simulator"><img src="https://artedu1808.github.io/img/3d-car-simulator.png"></a>
        <a href="go/moto-maniac.html"><img src="https://artedu1808.github.io/img/moto-maniac.png"></a>
        <a href="go/fortz.html"><img src="https://artedu1808.github.io/img/fortz.png"></a>
        <a href="go/bullet-force.html"><img src="https://artedu1808.github.io/img/bullet-force.png"></a>
        <a href="go/bumper-cars-soccer.html"><img src="https://artedu1808.github.io/img/bumper-cars-soccer.png"></a>
        <a href="go/moto-x3m-spooky-land.html"><img src="https://artedu1808.github.io/img/moto-x3m-spooky-land.png"></a>
-       <a href="go/deepest-sword.html"><img src="https://artedu1808.github.io/img/deepest-sword.png"></a>
        <a href="go/raft-wars-multiplayer.html"><img src="https://artedu1808.github.io/img/raft-wars-multiplayer.png"></a>
        <a href="go/word-city-uncrossed.html"><img src="https://artedu1808.github.io/img/word-city-uncrossed.png"></a>
        <a href="go/energy.html"><img src="https://artedu1808.github.io/img/energy.png"></a>
@@ -269,8 +354,7 @@
        <a href="go/tube-jumpers.html"><img src="https://artedu1808.github.io/img/tube-jumpers.png"></a>
        <a href="go/merge-harvest.html"><img src="https://artedu1808.github.io/img/merge-harvest.png"></a>
        <a href="go/wizard-mike.html"><img src="https://artedu1808.github.io/img/wizard-mike.png"></a>
-       <a href="go/gunspin.html"><img src="https://artedu1808.github.io/img/gunspin.png"></a>
-       <a href="go/mob-city.html"><img src="https://artedu1808.github.io/img/mob-city.png"></a>
+       <a href="go/slope.html"><img src="https://artedu1808.github.io/img/slope.png"></a>
        <a href="go/funny-shooter-2.html"><img src="https://artedu1808.github.io/img/funny-shooter-2.png"></a>
        <a href="go/cubito-mayhem.html"><img src="https://artedu1808.github.io/img/cubito-mayhem.png"></a>
        <a href="go/zombie-derby-pixel-survival.html"><img src="https://artedu1808.github.io/img/zombie-derby-pixel-survival.png"></a>
@@ -286,13 +370,11 @@
     <hr>
     <a href="https://forms.gle/djqKxqWDcruoCTTs6"><p>Recomendations Form</p></a>
     <hr>
-    <a href="https://docs.google.com/document/d/1HD0Qa62yqkUtvlr7Pg91J2yJBYF3GUOHr_ztSatWodU/edit?usp=sharing"><p> >>Unblocked Games Project Info<< </p></a>
-    <hr>
     <!--<div class="fixed-bar">
       <div class="current-time" id="current-time">00:00</div>
     </div>-->
   </body>
   <footer>
-    <p>Version: 1.3.1</p>
+    <p>Version: 1.3.5</p>
   </footer>
 </html>
